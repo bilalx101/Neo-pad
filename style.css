@@ -1,14 +1,94 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0a0a0a;
-  color: #dadada;
-  line-height: 1.6;
-  padding: 20px;
+  background-color: black;
+  color: beige;
+}
+.top_bar {
+  display: flex;
+  background-color: #940707;
+  color: rgb(59, 197, 0);
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding-right: 20px;
+}
+.logo {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+.right_side {
+  display: flex;
+  gap: 5px;
+}
+.left_side {
+  display: flex;
+  gap: 10px;
+  padding-right: 10px;
+  align-items: center;
+}
+.left_side button {
+  padding: 5px 12px 5px 12px;
+  font-size: 20px;
+  background-color: #5440d0;
+  color: white;
+  font-weight: 100;
+  border-radius: 7px;
+  border: none;
+  align-items: center;
+}
+.left_side .icon {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 7px 7px 7px 7px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+.drop_down {
+  position: relative;
+  display: inline-block;
+  padding-top: 6px;
+}
+.drop_menu a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 40px;
+  padding-left: 5px;
+
+  background-color: #242424;
+  z-index: 1;
+}
+.drop_btn {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.drop_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #222;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+.drop_menu.show {
+  display: block;
 }
